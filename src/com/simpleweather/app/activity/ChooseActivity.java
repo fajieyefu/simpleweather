@@ -183,9 +183,10 @@ public class ChooseActivity extends Activity {
 	public void onBackPressed() {
 		if(currentLevel==LEVEL_CITY)
 			queryProvince();
-		if(isFromWeatherActivity){
+		else if(isFromWeatherActivity){
 			Intent intent = new Intent(this,WeatherActivity.class);
 			startActivity(intent);
+			finish();
 		}else
 			finish();
 	}
